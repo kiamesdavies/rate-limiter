@@ -15,13 +15,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class RateLimiterTest {
 
     @Test
-    public void shouldReleaseAllTokensWihSameRequests() throws InterruptedException {
-        ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(5);
+    public void shouldReleaseAllTokensWihSameRequests() {
+        ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(10);
         RateLimiter rate = new SimpleRateLimiter("test", 1, 5);
         CompletionService<Integer> service = new ExecutorCompletionService<>(newFixedThreadPool);
         IntStream.range(0, 5).forEach(a -> service.submit(() -> rate.getPermit()));
         
-        List<Integer> result = IntStream.range(0, 5).mapToObj(i -> Try.of(() -> service.poll().get(1, TimeUnit.SECONDS) ).get()).collect(Collectors.toList());
+        List<Integer> result = IntStream.range(0, 5).mapToObj(i -> Try.of(() -> service.take().get(1, TimeUnit.SECONDS) ).get()).collect(Collectors.toList());
         assertThat(result, contains(1,1,1,1,1));
         assertThat(rate.getPermitsLeft(), equalTo(0));
 
@@ -29,20 +29,35 @@ public class RateLimiterTest {
 
     @Test
     public void shouldFailToReleaseTokenGivenRequestsAreMoreThanToken() {
-        ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(5);
-        RateLimiter rate = new SimpleRateLimiter("test", 1, 5);
+        ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(10);
+        RateLimiter rate = new SimpleRateLimiter("test2", 1, 5);
         CompletionService<Integer> service = new ExecutorCompletionService<>(newFixedThreadPool);
 
         IntStream.range(0, 6).forEach(a -> service.submit(() -> rate.getPermit()));
 
-        List<Integer> result = IntStream.range(0, 6).mapToObj(i -> Try.of(() -> service.poll().get(1, TimeUnit.SECONDS) ).get()).collect(Collectors.toList());
+        List<Integer> result = IntStream.range(0, 6).mapToObj(i -> Try.of(() -> service.take().get(1, TimeUnit.SECONDS) ).get()).collect(Collectors.toList());
         assertThat(result, containsInAnyOrder(1,1,1,1,1,0));
         assertThat(rate.getPermitsLeft(), equalTo(0));
     }
 
     @Test
-    public void shouldReleaseAllTokenGivenRequestsAreWithinTimeQuota() {
+    public void shouldReleaseAllTokenGivenRequestsAreWithinTimeQuota() throws InterruptedException {
+        ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(10);
+        RateLimiter rate = new SimpleRateLimiter("test3", 1, 5);
+        CompletionService<Integer> service = new ExecutorCompletionService<>(newFixedThreadPool);
+        IntStream.range(0, 6).forEach(a -> service.submit(() -> rate.getPermit()));
 
+        List<Integer> result = IntStream.range(0, 6).mapToObj(i -> Try.of(() -> service.take().get(1, TimeUnit.SECONDS) ).get()).collect(Collectors.toList());
+        assertThat(result, containsInAnyOrder(1,1,1,1,1,0));
+        assertThat(rate.getPermitsLeft(), equalTo(0));
+
+        //test again
+        Thread.sleep(1000);
+        IntStream.range(0, 6).forEach(a -> service.submit(() -> rate.getPermit()));
+
+        result = IntStream.range(0, 6).mapToObj(i -> Try.of(() -> service.take().get(1, TimeUnit.SECONDS) ).get()).collect(Collectors.toList());
+        assertThat(result, containsInAnyOrder(1,1,1,1,1,0));
+        assertThat(rate.getPermitsLeft(), equalTo(0));
     }
 
 }

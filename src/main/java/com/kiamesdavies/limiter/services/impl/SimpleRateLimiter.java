@@ -30,7 +30,7 @@ public class SimpleRateLimiter implements RateLimiter {
         this.timeQuota = timeQuota;
         this.permits = permits;
         permitsLeft = permits;
-        logger.debug("Created limiter {} for {} in {} seconds", name, permits, timeQuota);
+        logger.debug("Created limiter {} for {} permit per {} seconds", name, permits, timeQuota);
     }
 
 
@@ -53,7 +53,7 @@ public class SimpleRateLimiter implements RateLimiter {
                 return 1;
             }
             int currentInstance = Calendar.getInstance().get(Calendar.SECOND);
-            if (lastInstanceQuotaStarted + timeQuota < currentInstance) {
+            if (lastInstanceQuotaStarted + timeQuota <= currentInstance) {
                 lastInstanceQuotaStarted = currentInstance;
                 permitsLeft = permits - 1;
                 return 1;
@@ -65,7 +65,7 @@ public class SimpleRateLimiter implements RateLimiter {
     }
 
     /**
-     * @return number of permits left
+     * @return number of permits left, this should not be used for synchronization
      */
     @Override
     public int getPermitsLeft() {
