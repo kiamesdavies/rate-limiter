@@ -57,7 +57,8 @@ You can package and run the integration test
 if the integration tests fail, it could be due to system resources, package and run the application then run the integration tests separately in another terminal using 
 >  mvn clean verify -P integration
 
-if the integration tests fail still on your system, reduce the requests to 100 by editing  `pom.xml -> <argument>-Dapi.city.permits=150</argument>` and `load_generation.properties -> number.of.threads=150`
+if the integration tests fail still on your system, reduce the requests to 100 by editing  `pom.xml -> <argument>-Dapi.city.permits=150</argument>` 
+and `load_generation.properties -> number.of.threads=150`
 
 To configure the number requests/permits allowed for a particular endpoint use 
 > -Dapi.{endpoint}.permits={value}
