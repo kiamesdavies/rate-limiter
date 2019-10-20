@@ -18,7 +18,7 @@ The purpose of this project is to build a demo Rate Limiter API. The following t
 If the rate gets higher than the threshold on an endpoint, the API should stop responding for 5 seconds 
 ===
 
-This section of requirement was not really understood, so I assumed that when the number of permits/requets have been exceeded within a particular quota, and their still requests coming in within that quota, delay the next next quota by additional 5 seconds. 
+This section of requirement was not really understood, so I assumed that when the number of permits/requets have been exceeded within a particular quota, and their still requests coming in within that quota, delay the next quota by additional 5 seconds. 
 
 Project Structure
 ===
@@ -48,14 +48,14 @@ To package the application without running the integration test
 
 > mvn clean package
 
-Otherwise, you can package and run the integration test
-> mvn clean verify
-
-if the integration tests fail, it could be due to system resources, package the application then run the integration  tests separately in another terminal using 
->  mvn clean verify -P integration
-
 After packaging, an executable jar file will be produced, run with
 > java -jar ./target/java-project-1.0.jar
+
+You can package and run the integration test
+> mvn clean verify
+
+if the integration tests fail, it could be due to system resources, package and run the application then run the integration tests separately in another terminal using 
+>  mvn clean verify -P integration
 
 To configure the number requests/permits allowed for a particular endpoint use 
 > -Dapi.{endpoint}.permits={value}
