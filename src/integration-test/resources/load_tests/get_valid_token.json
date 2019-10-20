@@ -1,0 +1,61 @@
+{
+  "scenarioName": "Valid Core API Test",
+  "steps": [
+    {
+      "name": "get_hotels_in_bangkok",
+      "url": "/city/bangkok",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body": {
+          "data": [
+            {
+              "id": 1,
+              "city": "Bangkok",
+              "room": "Deluxe",
+              "price": 1000
+            },
+            {
+              "id": 6,
+              "city": "Bangkok",
+              "room": "Superior",
+              "price": 2000
+            },
+            {
+              "id": 8,
+              "city": "Bangkok",
+              "room": "Superior",
+              "price": 2400
+            },
+            {
+              "id": 11,
+              "city": "Bangkok",
+              "room": "Deluxe",
+              "price": 60
+            },
+            {
+              "id": 14,
+              "city": "Bangkok",
+              "room": "Sweet Suite",
+              "price": 25000
+            },
+            {
+              "id": 15,
+              "city": "Bangkok",
+              "room": "Deluxe",
+              "price": 900
+            },
+            {
+              "id": 18,
+              "city": "Bangkok",
+              "room": "Sweet Suite",
+              "price": 5300
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -21,6 +21,11 @@
             <version>1.7.28</version>
         </dependency>
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.28</version>
+        </dependency>
+        <dependency>
             <groupId>com.univocity</groupId>
             <artifactId>univocity-parsers</artifactId>
             <version>2.8.3</version>
@@ -74,6 +79,12 @@
             <artifactId>akka-http-testkit_${scala.version}</artifactId>
             <version>${akka.http.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.0-jre</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -131,8 +142,11 @@
                             <executable>java</executable>
 
                             <arguments>
+                                <argument>-Dapi.city.timer=30</argument>
+                                <argument>-Dapi.city.permits=300</argument>
                                 <argument>-jar</argument>
                                 <argument>${basedir}/target/${project.artifactId}-${project.version}.jar</argument>
+                                
                             </arguments>
                             <async>true</async>
                         </configuration>
@@ -189,6 +203,42 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.12.0</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>add-integration-test-source</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/integration-test/java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>add-integration-test-resource</id>
+                        <phase>generate-test-resources</phase>
+                        <goals>
+                            <goal>add-test-resource</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>src/integration-test/resources</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 

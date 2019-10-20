@@ -7,6 +7,7 @@ import akka.http.javadsl.model.StatusCodes;
 import akka.http.javadsl.server.AllDirectives;
 import akka.http.javadsl.server.RequestContext;
 import akka.http.javadsl.server.Route;
+import com.google.common.collect.ImmutableMap;
 import com.kiamesdavies.limiter.commons.Utility;
 import com.kiamesdavies.limiter.models.Hotel;
 import com.kiamesdavies.limiter.services.RateLimiter;
@@ -19,6 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static akka.http.javadsl.server.PathMatchers.segment;
 import com.typesafe.config.Config;
+import org.checkerframework.checker.units.qual.h;
 
 public class HotelController extends AllDirectives {
 
@@ -57,7 +59,7 @@ public class HotelController extends AllDirectives {
                 hotels = new ArrayList<>(hotels);
                 Collections.reverse(hotels);
             }
-            return response.withStatus(StatusCodes.OK).withEntity(ContentTypes.APPLICATION_JSON, Utility.toBytes(hotels));
+            return response.withStatus(StatusCodes.OK).withEntity(ContentTypes.APPLICATION_JSON, Utility.toBytes(ImmutableMap.of("data",hotels)));
         }
        
         return response.withStatus(StatusCodes.FORBIDDEN).withEntity(ContentTypes.TEXT_PLAIN_UTF8, "You have exceed api requests allowed");
@@ -75,7 +77,7 @@ public class HotelController extends AllDirectives {
                 hotels = new ArrayList<>(hotels);
                 Collections.reverse(hotels);
             }
-            return response.withStatus(StatusCodes.OK).withEntity(ContentTypes.APPLICATION_JSON, Utility.toBytes(hotels));
+            return response.withStatus(StatusCodes.OK).withEntity(ContentTypes.APPLICATION_JSON, Utility.toBytes(ImmutableMap.of("data", hotels)));
         }
         
         return response.withStatus(StatusCodes.FORBIDDEN).withEntity(ContentTypes.TEXT_PLAIN_UTF8, "You have exceed api requests allowed");

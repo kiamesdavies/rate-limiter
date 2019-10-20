@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.kiamesdavies.limiter.integration_tests;
+package com.kiamesdavies.limiter.tests;
 
 /**
  *

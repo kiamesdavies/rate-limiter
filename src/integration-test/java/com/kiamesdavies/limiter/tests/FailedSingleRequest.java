@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.kiamesdavies.limiter.integration_tests;
+package com.kiamesdavies.limiter.tests;
 
 import org.jsmart.zerocode.core.domain.JsonTestCase;
 import org.jsmart.zerocode.core.domain.TargetEnv;
@@ -17,11 +17,10 @@ import org.junit.runner.RunWith;
  */
 @TargetEnv("server_host.properties")
 @RunWith(ZeroCodeUnitRunner.class)
-public class BasinSingleRequest {
-    
+public class FailedSingleRequest {
     @Test
-    @JsonTestCase("load_tests/get_valid_token.json")
-    public void testGetPermit() throws Exception {
+    @JsonTestCase("load_tests/failed_getting_token.json")
+    public void testFailedToken() throws Exception {
 
     }
 }

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.kiamesdavies.limiter.services;
+package com.kiamesdavies.limiter.commons;
 
-import com.kiamesdavies.limiter.commons.Utility;
+import org.junit.Test;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import org.junit.Test;
 
 /**
  *
@@ -19,6 +19,8 @@ public class UtilityTest {
     
     @Test
     public void testBaseExtractor(){
+
         assertThat(Utility.extractBaseUrl("/city/sss").get(), is("city"));
+        assertThat(Utility.extractBaseUrl("/city/sss/").get(), is("city"));
     }
 }

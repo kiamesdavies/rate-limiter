@@ -16,7 +16,6 @@ public class App  extends HttpApp
         App app = new App();
         app.startServer("0.0.0.0",
                 ConfigFactory.load().getInt("server.port"));
-        System.out.println("Server Started");
     }
 
 
