@@ -3,26 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cc3e37fd-50da-4fc7-ac92-9b754fb21f4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/BasicMultipleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/BasicMultipleRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/BasicSingleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/BasicSingleRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/CombinedTestIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/CombinedTestIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/FailedSingleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/FailedSingleRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/integration-test/resources/load_generation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration-test/resources/load_generation.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/integration-test/resources/logback-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration-test/resources/logback-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/integration-test/resources/server_host.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration-test/resources/server_host.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/commons/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/commons/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/controllers/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/controllers/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/HotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/HotelRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/RateLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/RateLimiter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/impl/SimpleRateLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/impl/SimpleRateLimiter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hoteldb.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hoteldb.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/~$te_API.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/commons/UtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/commons/UtilityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/services/HotelRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/services/HotelRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/services/RateLimiterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/services/RateLimiterTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,6 +17,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/impl/SimpleRateLimiter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/integration-test/java/com/kiamesdavies/limiter/tests/BasicSingleRequest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/controllers/HotelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="170">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,15 +90,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/HotelRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="33" column="72" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/RateLimiter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -119,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,7 +154,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/impl/HotelRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/services/RateLimiterTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.conf" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/impl/SimpleRateLimiter.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/services/UtilityTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/commons/UtilityTest.java" />
         <option value="$PROJECT_DIR$/src/test/resources/load_tests/failed_getting_token.json" />
@@ -182,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/HotelRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/commons/Utility.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/impl/SimpleRateLimiter.java" />
       </list>
     </option>
   </component>
@@ -300,6 +283,16 @@
               <item name="java-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="limiter" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -347,7 +340,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CombinedTestIT">
+  <component name="RunManager" selected="JUnit.All in java-project">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kiamesdavies.limiter.App" />
       <module name="java-project" />
@@ -369,6 +362,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in java-project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CombinedTestIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-project" />
       <extension name="coverage">
@@ -379,21 +380,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.kiamesdavies.limiter.tests" />
       <option name="MAIN_CLASS_NAME" value="com.kiamesdavies.limiter.tests.CombinedTestIT" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UtilityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kiamesdavies.limiter.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.kiamesdavies.limiter.services" />
-      <option name="MAIN_CLASS_NAME" value="com.kiamesdavies.limiter.services.UtilityTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -417,11 +403,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in java-project" />
         <item itemvalue="JUnit.CombinedTestIT" />
         <item itemvalue="JUnit.All in java-project (1)" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.UtilityTest.testBaseExtractor" />
-        <item itemvalue="JUnit.UtilityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -461,7 +447,7 @@
       <workItem from="1571529599875" duration="1332000" />
       <workItem from="1571567124385" duration="1389000" />
       <workItem from="1571593308660" duration="190000" />
-      <workItem from="1571593951172" duration="290000" />
+      <workItem from="1571593951172" duration="421000" />
     </task>
     <servers />
   </component>
@@ -498,13 +484,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20411000" />
+    <option name="totallyTimeSpent" value="20542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29756796" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29756796" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -524,7 +510,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="JProfiler" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -685,16 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/impl/SimpleRateLimiter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/kiamesdavies/limiter/services/HotelRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -738,17 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/RateLimiter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -792,8 +761,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/controllers/HotelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="170">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/RateLimiter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kiamesdavies/limiter/services/impl/SimpleRateLimiter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
