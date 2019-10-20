@@ -53,9 +53,9 @@ public class SimpleRateLimiter implements RateLimiter {
         }
 
         long currentInstance = System.currentTimeMillis();
+        long expected = lastInstanceQuotaStarted.get();
         //if there is request to obtain a permit before quota ends i.e the rate gets higher than the threshold and not previously locked then increase delay by lockedTime(5 seconds)
-        if (lastInstanceQuotaStarted.get() + timeQuota > currentInstance && locked.compareAndSet(false, true)) {
-            long expected = lastInstanceQuotaStarted.get();
+        if (expected + timeQuota > currentInstance && locked.compareAndSet(false, true)) {
             lastInstanceQuotaStarted.compareAndExchange(expected, expected + lockedTime);
             logger.debug("Delayed quota for {} till {}", name, expected + lockedTime);
         }
@@ -66,6 +66,7 @@ public class SimpleRateLimiter implements RateLimiter {
             logger.debug("Added another quota for {}", name);
             return 1;
         }
+        
         if (permitsLeft.getAndAccumulate(1, (current, j) -> current > 0 ? current - j : 0) > 0) {
             return 1;
         }
