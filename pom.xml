@@ -4,7 +4,7 @@
     <groupId>com.kiamesdavies.test</groupId>
     <artifactId>java-project</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <name>java-project</name>
     <url>http://maven.apache.org</url>
@@ -96,7 +96,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>
                 <configuration>
-                     <source>8</source>
+                    <source>8</source>
                     <target>8</target>
                 </configuration>
             </plugin>
@@ -111,6 +111,9 @@
                         <version>${junit.platform.version}</version>
                     </dependency>
                 </dependencies>
+                <configuration>
+                    <skipTests>${skip.unit.tests}</skipTests>
+                </configuration>
             </plugin>
 
             <plugin>
@@ -127,32 +130,7 @@
                 </executions>
             </plugin>
 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
-                <executions>
-                    <execution>
-                        <id>default-cli</id>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <phase>pre-integration-test</phase>
-                        <configuration>
-                            <executable>java</executable>
 
-                            <arguments>
-                                <argument>-Dapi.city.timer=30</argument>
-                                <argument>-Dapi.city.permits=300</argument>
-                                <argument>-jar</argument>
-                                <argument>${basedir}/target/${project.artifactId}-${project.version}.jar</argument>
-                                
-                            </arguments>
-                            <async>true</async>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -270,6 +248,51 @@
         <akka.version>2.5.25</akka.version>
         <akka.http.version>10.1.9</akka.http.version>
         <java-hamcrest.version>2.0.0.0</java-hamcrest.version>
+        <skip.unit.tests>false</skip.unit.tests>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.6.0</version>
+                        <executions>
+                            <execution>
+                                <id>default-cli</id>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <phase>pre-integration-test</phase>
+                                <configuration>
+                                    <executable>java</executable>
+                                    <arguments>
+                                        <argument>-Dapi.city.timer=10</argument>
+                                        <argument>-Dapi.city.permits=100</argument>
+                                        <argument>-jar</argument>
+                                        <argument>${basedir}/target/${project.artifactId}-${project.version}.jar</argument>
+
+                                    </arguments>
+                                    <async>true</async>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>integration</id>
+            <properties>
+                <skip.unit.tests>true</skip.unit.tests>
+            </properties>
+
+        </profile>
+    </profiles>
 </project>

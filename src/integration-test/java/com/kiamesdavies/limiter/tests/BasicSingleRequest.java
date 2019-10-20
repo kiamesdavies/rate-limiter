@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
  */
 @TargetEnv("server_host.properties")
 @RunWith(ZeroCodeUnitRunner.class)
-public class BasinSingleRequest {
+public class BasicSingleRequest {
     
     @Test
     @JsonTestCase("load_tests/get_valid_token.json")

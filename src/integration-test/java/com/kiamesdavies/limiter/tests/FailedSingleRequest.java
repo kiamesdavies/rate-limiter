@@ -7,6 +7,8 @@ package com.kiamesdavies.limiter.tests;
 
 import org.jsmart.zerocode.core.domain.JsonTestCase;
 import org.jsmart.zerocode.core.domain.TargetEnv;
+import org.jsmart.zerocode.core.domain.UseHttpClient;
+import org.jsmart.zerocode.core.httpclient.ssl.SslTrustHttpClient;
 import org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +18,7 @@ import org.junit.runner.RunWith;
  * @author atlantis
  */
 @TargetEnv("server_host.properties")
+@UseHttpClient(SslTrustHttpClient.class)
 @RunWith(ZeroCodeUnitRunner.class)
 public class FailedSingleRequest {
     @Test

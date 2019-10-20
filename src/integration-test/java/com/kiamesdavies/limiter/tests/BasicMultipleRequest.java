@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
  * @author atlantis
  */
 @LoadWith("load_generation.properties")
-@TestMapping(testClass = BasinSingleRequest.class, testMethod = "testGetPermit")
+@TestMapping(testClass = BasicSingleRequest.class, testMethod = "testGetPermit")
 @RunWith(ZeroCodeLoadRunner.class)
 public class BasicMultipleRequest {
     

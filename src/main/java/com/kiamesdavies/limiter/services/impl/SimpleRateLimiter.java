@@ -61,7 +61,7 @@ public class SimpleRateLimiter implements RateLimiter {
 
 
             long currentInstance = System.currentTimeMillis();
-            //if there is request before quota ends, increase delay by lockedTime
+            //if there is request before quota ends i.e the rate gets higher than the threshold , increase delay by lockedTime(5 seconds)
             if(lastInstanceQuotaStarted + timeQuota > currentInstance && !locked){
                 lastInstanceQuotaStarted += lockedTime ;
                 logger.debug("locking {} till lastInstanceQuotaStarted {} from currentInstance {} using a delay of {} miils", name, lastInstanceQuotaStarted, currentInstance, lockedTime);
@@ -73,7 +73,7 @@ public class SimpleRateLimiter implements RateLimiter {
                 locked = false;
                 return 1;
             }
-            logger.debug(" still have {} milliseconds to go before resetting for {}  ", lastInstanceQuotaStarted-currentInstance+timeQuota, name);
+            logger.debug("still have {} milliseconds to go before resetting for {}  ", lastInstanceQuotaStarted-currentInstance+timeQuota, name);
 
             return 0;
         }
