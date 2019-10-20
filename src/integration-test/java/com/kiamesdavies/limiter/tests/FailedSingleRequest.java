@@ -14,7 +14,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- *
  * @author atlantis
  */
 @TargetEnv("server_host.properties")

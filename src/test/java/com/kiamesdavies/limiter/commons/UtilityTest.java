@@ -11,14 +11,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 /**
- *
  * @author atlantis
  */
 public class UtilityTest {
- 
-    
+
+
     @Test
-    public void testBaseExtractor(){
+    public void testBaseExtractor() {
 
         assertThat(Utility.extractBaseUrl("/city/sss").get(), is("city"));
         assertThat(Utility.extractBaseUrl("/city/sss/").get(), is("city"));

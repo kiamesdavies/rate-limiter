@@ -11,13 +11,12 @@ import org.jsmart.zerocode.core.runner.parallel.ZeroCodeLoadRunner;
 import org.junit.runner.RunWith;
 
 /**
- *
  * @author atlantis
  */
 @LoadWith("load_generation.properties")
 @TestMapping(testClass = BasicSingleRequest.class, testMethod = "testGetPermit")
 @RunWith(ZeroCodeLoadRunner.class)
 public class BasicMultipleRequest {
-    
-    
+
+
 }

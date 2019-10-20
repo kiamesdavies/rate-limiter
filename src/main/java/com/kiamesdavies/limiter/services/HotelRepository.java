@@ -17,9 +17,8 @@ import static java.util.stream.Collectors.toList;
 
 public class HotelRepository {
 
-    private final Logger logger = LoggerFactory.getLogger(HotelRepository.class);
-
     private volatile static HotelRepository instance;
+    private final Logger logger = LoggerFactory.getLogger(HotelRepository.class);
     private final Map<String, List<Hotel>> CACHE;
     private final List<Hotel> hotels;
 
