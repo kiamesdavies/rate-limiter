@@ -1,4 +1,4 @@
-package com.kiamesdavies.limiter.services.impl;
+package com.kiamesdavies.limiter.services;
 
 import com.kiamesdavies.limiter.models.Hotel;
 import com.univocity.parsers.common.processor.BeanListProcessor;

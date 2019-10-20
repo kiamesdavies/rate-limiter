@@ -1,7 +1,6 @@
 package com.kiamesdavies.limiter.services;
 
 import com.kiamesdavies.limiter.models.Hotel;
-import com.kiamesdavies.limiter.services.impl.HotelRepository;
 import org.junit.Test;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;

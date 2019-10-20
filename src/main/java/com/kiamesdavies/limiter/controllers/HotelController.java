@@ -11,7 +11,7 @@ import com.google.common.collect.ImmutableMap;
 import com.kiamesdavies.limiter.commons.Utility;
 import com.kiamesdavies.limiter.models.Hotel;
 import com.kiamesdavies.limiter.services.RateLimiter;
-import com.kiamesdavies.limiter.services.impl.HotelRepository;
+import com.kiamesdavies.limiter.services.HotelRepository;
 import com.kiamesdavies.limiter.services.impl.SimpleRateLimiter;
 import com.typesafe.config.ConfigFactory;
 

@@ -39,9 +39,9 @@ Integration Test and Running
 
 Under the root folder, there is a `integration-test` folder, it contains the following classes
 - `BasicSingleRequest`: Runs a single scenario of getting hotels of bangkok
-- `BasicMultipleRequest`: Runs `BasicSingleRequest` above 100 times within 9 seconds, making it acquire 100 permits with that time frame
+- `BasicMultipleRequest`: Runs `BasicSingleRequest` above 150 times within 9 seconds, making it acquire 150 permits with that time frame
 - `FailedSingleRequest`: Runs a single scenario of failing to get any other permit
-- `CombinedTestSuiteIT`: This is the only directly executable integration test. During integration test, the city is configured to allow 100 requests within 10 seconds, so `CombinedTestSuiteIT` runs `BasicMultipleRequest` then `FailedSingleRequest` to assert that 100 concurrent requests are able to acquire all 100 permits within 9 seconds and subsequent request fails with status 403
+- `CombinedTestSuiteIT`: This is the only directly executable integration test. During integration test, the city is configured to allow 150 requests within 10 seconds, so `CombinedTestSuiteIT` runs `BasicMultipleRequest` then `FailedSingleRequest` to assert that 150 concurrent requests are able to acquire all 150 permits within 9 seconds and subsequent request fails with status 403
   
 
 To package the application without running the integration test 
