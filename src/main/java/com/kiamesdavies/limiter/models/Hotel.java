@@ -1,6 +1,5 @@
 package com.kiamesdavies.limiter.models;
 
-import com.univocity.parsers.annotations.LowerCase;
 import com.univocity.parsers.annotations.Parsed;
 import com.univocity.parsers.annotations.Trim;
 
@@ -12,11 +11,9 @@ public class Hotel {
     @Parsed(field = "HOTELID")
     private int id;
     @Trim
-    @LowerCase
     @Parsed(field = "CITY")
     private String city;
     @Trim
-    @LowerCase
     @Parsed(field = "ROOM")
     private String room;
     @Parsed(field = "PRICE")
@@ -78,6 +75,9 @@ public class Hotel {
     public String toString() {
         return "Hotel{" +
                 "id=" + id +
+                ", city='" + city + '\'' +
+                ", room='" + room + '\'' +
+                ", price=" + price +
                 '}';
     }
 }

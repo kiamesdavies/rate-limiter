@@ -1,0 +1,17 @@
+{
+  "scenarioName": "Forbidden Core API Test",
+  "steps": [
+
+    {
+      "name": "get_hotels_in_bangkoko",
+      "url": "/city/bangkok",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 403
+      }
+    }
+  ]
+
+}
