@@ -63,8 +63,8 @@ To configure the number requests/permits allowed for a particular endpoint use
 To configure the time quota for a particular endpoint use 
 > -Dapi.{endpoint}.timer={value}
 
-For example to configure that the city endpoint allow 100 requests within 9 requests
-> java -Dapi.city.permits=100 -Dapi.city.timer=9 -jar ./target/java-project-1.0.jar 
+For example to configure that the city endpoint allow 100 requests within 10 seconds
+> java -Dapi.city.permits=100 -Dapi.city.timer=10 -jar ./target/java-project-1.0.jar 
 
 Optionally you can run the project through maven
 >mvn exec:java -Dexec.mainClass="com.kiamesdavies.limiter.App"
