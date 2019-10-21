@@ -25,7 +25,7 @@ public class SimpleRateLimiter implements RateLimiter {
     private final int lockedTime;
 
     /**
-     * @param name      used for differentiating differ
+     * @param name      used for differentiating permits
      * @param timeQuota number of seconds before resetting quota
      * @param permits   number of records per the seconds given
      */
@@ -63,7 +63,7 @@ public class SimpleRateLimiter implements RateLimiter {
         if (lastInstanceQuotaStarted.get() + timeQuota <= currentInstance && permitsLeft.compareAndSet(0, permits - 1)) {
             lastInstanceQuotaStarted.set(currentInstance);
             locked.set(false);
-            logger.debug("Added another quota for {}", name);
+            logger.debug("Added {} permits for {}", permits, name);
             return 1;
         }
         
